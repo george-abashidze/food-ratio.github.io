@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean & Athletic Diet Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="icon">⚡</span>
+            <span class="title">Lean & Athletic</span>
+        </div>
+        <div class="subtitle">კვების ასისტენტი</div>
+    </header>
+
+    <main class="container">
+        <!-- Search & Filter Section -->
+        <div class="search-filter-container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="მოძებნე კერძი, ინგრედიენტი..." autocomplete="off">
+            </div>
+            
+            <div class="quick-chips" id="quick-chips">
+                <button class="chip active" data-filter="all">ყველა</button>
+                <button class="chip" data-filter="bread-ok">✔️ პურით</button>
+                <button class="chip" data-filter="no-bread">❌ უპუროდ</button>
+                <button class="chip" data-filter="before-workout">🔥 ვარჯიშის წინ</button>
+                <button class="chip" data-filter="after-workout">💪 ვარჯიშის შემდეგ</button>
+            </div>
+        </div>
+
+        <!-- Category Navigation Tabs -->
+        <nav class="categories">
+            <button class="tab-btn active" data-category="food">
+                <span class="tab-icon">🍲</span>
+                <span>საკვები</span>
+            </button>
+            <button class="tab-btn" data-category="drinks">
+                <span class="tab-icon">🥤</span>
+                <span>სასმელები</span>
+            </button>
+            <button class="tab-btn" data-category="supplements">
+                <span class="tab-icon">🧪</span>
+                <span>დანამატები</span>
+            </button>
+            <button class="tab-btn" data-category="fruits">
+                <span class="tab-icon">🍓</span>
+                <span>ხილი</span>
+            </button>
+            <button class="tab-btn" data-category="snacks">
+                <span class="tab-icon">🍬</span>
+                <span>სასუსნავი</span>
+            </button>
+            <button class="tab-btn cheat-tab" data-category="cheat">
+                <span class="tab-icon">🥩</span>
+                <span>Cheat Meal</span>
+            </button>
+        </nav>
+
+        <!-- Dynamic Content Grid -->
+        <section id="cards-grid" class="cards-grid">
+            <!-- Cards populated by JS -->
+        </section>
+        
+        <div id="no-results" class="no-results" style="display: none;">
+            <p>ვერაფერი მოიძებნა 🥲</p>
+        </div>
+    </main>
+
+    <!-- Modal for Detailed View -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Modal content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Lean & Athletic Protocol 2026</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
